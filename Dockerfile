@@ -1,5 +1,7 @@
 FROM netflixoss/java:8
 MAINTAINER Antonio Navarro
+RUN apt-add-repository ppa:brightbox/ruby-ng && apt-get update
+RUN apt-get install ruby2.3 ruby2.3-dev
 
 RUN apt-get update && apt-get install apt-transport-https curl python -y
 
